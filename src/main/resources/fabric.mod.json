@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "industrialage",
+  "version": "${version}",
+  "name": "Industrial Age",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MPL-2.0",
+  "icon": "assets/industrialage/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.swishhyy.industrialage.client.IndustrialageClient"
+    ],
+    "main": [
+      "me.swishhyy.industrialage.Industrialage"
+    ]
+  },
+  "mixins": [
+    "industrialage.mixins.json",
+    {
+      "config": "industrialage.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
